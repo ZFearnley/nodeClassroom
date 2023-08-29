@@ -23,3 +23,25 @@ app.get('/teams/:id', (req,res) => {
 app.listen(3000, () => {
     console.log('Server running on port 3000')
 })
+
+app.get('/teams/:id', (req,res) => {
+    
+})
+
+app.post('/teams/:id', (req,res) => {
+    const teamId = teams.findIndex(t => t.id ===teamId)
+})
+
+app.delete('/teams/:id', (req,res) => {
+
+    
+    const teamId = parseInt(req.params.id, 10)
+    const teamIndex = teams.findIndex(t => t.id === teamId)
+
+    if(teamindex !== -1) {
+        teams.splice(teamindex, 1)
+        res.status(204).send()
+    } else {
+        res.status(404).send('Team not found')
+    }
+})
