@@ -1,0 +1,27 @@
+<%- include('./template/head.ejs') -%>
+
+<body>
+    <div>
+        <-% include('./template/nav.ejs') -%>
+        <main>
+            <h1>Courses</h1>
+            <p>Your courses</p>
+            <table>
+                <tr>
+                <th>Courses</th>
+                </tr>
+                <tr>
+                    <td>WEB</td>
+                    <td>SDV</td>
+                    <td>DAT</td>
+                </tr>
+            </table>
+        </main>
+    </div>
+</body>
+
+<script>
+    window.onload = function() {
+        document.getElementById('home').classList.add('active')
+    }
+</script>
